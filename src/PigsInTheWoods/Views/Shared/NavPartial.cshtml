@@ -1,0 +1,43 @@
+﻿@using PigsInTheWoods.Models.NavViewModels
+@model PagesViewModel
+
+<nav>
+    <ul>
+        @foreach (var page in Model.Pages)
+        {
+            <li>
+                <a href="@page.Route"> @page.PageName </a>
+                @if (page.SubPages?.Length > 0)
+                {
+                    <ul>
+                        @foreach (var subPage in page.SubPages)
+                        {
+                            <li>
+                                <a href="@subPage.Route"> @subPage.PageName </a>
+                            </li>
+                        }
+                    </ul>
+                }
+            </li>
+        }
+    </ul>
+</nav>
+
+@*<nav>
+    <ul>
+        <li><a href="#"> About </a></li>
+        <li><a href="#"> History </a></li>
+        <li>
+            <a href="#"> Meet the Pigs </a>
+            <ul>
+                <li><a href="#">Pig 1</a></li>
+                <li><a href="#">Pig 2</a></li>
+                <li><a href="#">Pig 3</a></li>
+                <li><a href="#">Pig 4</a></li>
+            </ul>
+        </li>
+        <li><a href="#"> Volunteering </a></li>
+        <li><a href="#"> Donate </a></li>
+        <li><a href="#"> Contact </a></li>
+    </ul>
+</nav>*@

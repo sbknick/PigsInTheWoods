@@ -1,0 +1,220 @@
+﻿.slabtexted .slabtext{display:-moz-inline-box;display:inline-block;white-space:nowrap}.slabtextinactive .slabtext{display:inline;white-space:normal;font-size:1em !important;letter-spacing:inherit !important;word-spacing:inherit !important;*letter-spacing:normal !important;*word-spacing:normal !important}.slabtextdone .slabtext{display:block}
+
+body{
+  padding: 0;
+  margin: 0;
+  background-image: url("../images/cork-wallet.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  }
+
+.wrapper {
+  width: 1000px;
+  height: 100%;
+  margin: 30px auto;
+  padding: 35px;
+  background-color: white;
+  box-shadow: 3px 3px 10px 6px #d6dcd6;
+}
+
+#header-img {
+  width: 100%;
+  height: 300px;
+  background-image: url("../images/header.jpg");
+  background-position: 0% 60%;
+  background-size: 100%;
+  margin-bottom: 10px;
+}
+
+/*------ nav stuff------*/
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /*-webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-padding-start: 0;*/
+}
+
+nav li {
+  float: left;
+  margin: 0 5px 0 0;
+  position: relative;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  display: block;
+  border: solid 1px black;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  /*width: 162px;*/
+  z-index: 2;
+  overflow: hidden;
+}
+
+nav li ul {
+  position: absolute;
+  box-shadow: 3px 5px 16px 0px rgba(0,0,0,0.3);
+  width: 100%;
+  display: none;
+}
+
+nav li:hover ul {
+  display: block;
+}
+
+nav li ul li {
+  float: none;
+  margin-right: 0;
+}
+
+nav li ul a {
+  border-top: none;
+  z-index: 1;
+}
+
+nav:after {  /*-----clearfix-----*/
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+ header {
+   margin-bottom: 40px;
+ }
+
+/*.content  {
+  padding: 0 20px 20px;
+}*/
+
+/*---- fonts ----*/
+
+@font-face {
+    font-family: 'gooddog';
+    src: url('../fonts/GoodDog-webfont.eot');
+    src: url('../fonts/GoodDog-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GoodDog-webfont.woff') format('woff'),
+         url('../fonts/GoodDog-webfont.ttf') format('truetype'),
+         url('../fonts/GoodDog-webfont.svg#gooddogregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*@font-face {
+    font-family: 'rayandoregular';
+    src: url('../fonts/rayando-webfont.eot');
+    src: url('../fonts/rayando-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/rayando-webfont.woff2') format('woff2'),
+         url('../fonts/rayando-webfont.woff') format('woff'),
+         url('../fonts/rayando-webfont.ttf') format('truetype'),
+         url('../fonts/rayando-webfont.svg#rayandoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+@font-face {
+    font-family: 'handdraft';
+    src: url('../fonts/handwriting-draft_free-version-webfont.eot');
+    src: url('../fonts/handwriting-draft_free-version-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/handwriting-draft_free-version-webfont.woff2') format('woff2'),
+         url('../fonts/handwriting-draft_free-version-webfont.woff') format('woff'),
+         url('../fonts/handwriting-draft_free-version-webfont.ttf') format('truetype'),
+         url('../fonts/handwriting-draft_free-version-webfont.svg#handwriting-draft_free-versRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sketchme';
+    src: url('../fonts/sketch-me__free-version-webfont.eot');
+    src: url('../fonts/sketch-me__free-version-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sketch-me__free-version-webfont.woff2') format('woff2'),
+         url('../fonts/sketch-me__free-version-webfont.woff') format('woff'),
+         url('../fonts/sketch-me__free-version-webfont.ttf') format('truetype'),
+         url('../fonts/sketch-me__free-version-webfont.svg#sketch_me_free-versionregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bodedo';
+    src: url('../fonts/HVD_Bodedo-webfont.eot');
+    src: url('../fonts/HVD_Bodedo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/HVD_Bodedo-webfont.woff') format('woff'),
+         url('../fonts/HVD_Bodedo-webfont.ttf') format('truetype'),
+         url('../fonts/HVD_Bodedo-webfont.svg#hvd_bodedomedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, header li, header hr {
+  font-family: bodedo;
+  color: #32675b;
+  /*letter-spacing: 1px;*/
+}
+
+h1, h2 {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+header h1, header h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*header h1 {
+  font-size: 110px;
+  letter-spacing: 20px;
+}*/
+/*
+header h2 {
+  font-size: 70px;
+  letter-spacing: 61px;
+  position: relative;
+}*/
+#slab1, #slab2 {
+  text-align: center;
+  margin: auto;
+}
+
+/*.slabtext-linesize-1 {
+  line-height: 1em;
+}*/
+
+nav li a {
+  text-decoration: none;
+  color: inherit;
+  background-color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 20px;
+  /*letter-spacing: 1px;*/
+}
+
+nav a:hover {
+  background-color: #d6dcd6;
+  box-shadow: 3px 5px 16px 0px rgba(0,0,0,0.3);
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+p {
+  font-family: Arial;
+  font-size: 15px;
+}

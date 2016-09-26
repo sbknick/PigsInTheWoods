@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pigs in the Woods - @ViewData["Title"]</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Rock+Salt" rel="stylesheet"> <!--rocksalt google font-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="~/js/jquery.slabtext.min.js"></script>
+    <script src="~/js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div id="header-img"></div>
+            <h1 id="slab1">Pigs in the woods</h1>
+            <h2 id="slab2">Huddersfield</h2>
+            <hr />
+            @Html.Partial("NavPartial", ViewData["PagesViewModel"])
+            <hr />
+        </header>
+
+        <section class="content">
+            @RenderBody()
+        </section>
+
+        <hr />
+        <footer>
+            <p>&copy; 2016 - Pigs In The Woods</p>
+        </footer>
+    </div> <!-- close wrapper div -->
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

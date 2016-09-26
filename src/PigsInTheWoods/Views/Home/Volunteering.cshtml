@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>About Us</h1>
+<p>
+    Hi there!  We are pigs in the woods.  We own a piece of woodland in the (area name) area, near Huddersfield, where we look after
+    (number) rescue pigs!  We rely on volunteers and donations so that we can continue to give these pigs their natural loving home.
+</p>
+
+<h2> Who are we </h2>
+<p> We are Jac and Russel, a husband and wife team. </p>
+<p> (a picture of you looking cool) </p>
+
+<h2> Where we are </h2>
+<p>
+    We are located (describe location).
+</p>
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:440px;width:700px;'>
+    <div id='gmap_canvas' style='height:440px;width:700px;'></div><div><small><a href="http://embedgooglemaps.com">									embed google maps							</a></small></div><div><small><a href="https:/disclaimergenerator.net">disclaimer example</a></small></div>
+    <style>
+        #gmap_canvas img {
+            max-width: none !important;
+            background: none !important;
+        }
+    </style>
+</div>
+<script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(53.574585,-1.6529609000000391),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(53.574585,-1.6529609000000391)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>denby dale<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+<br />
+<h2> About the woods </h2>
+<p>
+    (map of the woods)
+</p>
+<p>
+    We hold a variety of events at the woods, including school visits, fairs and treasure hunts.  Please go to our Events page
+    to find out about upcoming events, or to the Contact page if you are interested in arranging a visit.
+</p>
+<h2>About Veganism </h2>
+<p>
+    We believe animals should not be exploited and abused for our satisfaction.  We try to apply this principal wherever we can in our lives.
+    Of course everyone's circumstances are different but we encourage everyone to eliminate the products of animal suffering from their lives
+    wherever they are able. If you are interested in finding out more, we recomend (resources you like), and there are plenty of others out
+    there. If you are thinking of switching to a fully plant-based diet, we recommend checking out <a href="http://veganhealth.org/">
+        veganhealth.org
+    </a> as you make the change.
+</p>

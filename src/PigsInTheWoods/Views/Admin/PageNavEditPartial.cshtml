@@ -1,0 +1,70 @@
+﻿@using PigsInTheWoods.Models.NavViewModels
+@model PagesViewModel
+
+@{
+    Layout = "_AdminLayout";
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Page Name</th>
+            <th>Link</th>
+            <th>Order Index</th>
+            <th></th><th></th>
+        </tr>
+    </thead>
+
+    @foreach (var page in Model.Pages)
+    {
+        <tr>
+            <td>@page.PageName</td>
+            <td>@page.Route</td>
+            <td>@page.OrderIndex</td>
+        </tr>
+
+        @if (page.SubPages?.Length > 0)
+        {
+            <tr>
+                <th></th>
+                <th>Sub Page Name</th>
+                <th>Link</th>
+                <th>Order Index</th>
+                <th></th>
+            </tr>
+
+            @foreach (var subPage in page.SubPages)
+            {
+                <tr>
+                    <td>@subPage.PageName</td>
+                    <td>@subPage.Route</td>
+                    <td>@subPage.OrderIndex</td>
+                    <td></td>
+                </tr>
+            }
+        }
+    }
+</table>
+
+
+@*<nav>
+    <ul>
+        <li><a href="#"> About </a></li>
+        <li><a href="#"> History </a></li>
+        <li>
+            <a href="#"> Meet the Pigs </a>
+            <ul>
+                <li><a href="#">Pig 1</a></li>
+                <li><a href="#">Pig 2</a></li>
+                <li><a href="#">Pig 3</a></li>
+                <li><a href="#">Pig 4</a></li>
+            </ul>
+        </li>
+        <li><a href="#"> Volunteering </a></li>
+        <li><a href="#"> Donate </a></li>
+        <li><a href="#"> Contact </a></li>
+    </ul>
+</nav>*@
+
+<a asp-action="Pages">Nav Pages</a>

@@ -1,0 +1,5 @@
+src/PigsInTheWoods/obj/
+src/PigsInTheWoods/bin/
+src/PigsInTheWoods/seeddata.json
+src/PigsInTheWoods/wwwroot/lib/
+.vs/
